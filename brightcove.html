@@ -1,0 +1,73 @@
+<html>
+<header>
+  <title>Brightcove</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  <script type="text/javascript" src="brightcove.js"></script>
+  <link rel="stylesheet" src="brightcove.scss">
+</header>
+<body>
+<h3>NOTE: This demo only works in Codepen's 'Debug' mode, due to iFrame and cross-domain issues</h3>
+<h4>To see it working, click on 'Share', export the ZIP, extract, host on your local webserver. </h4>
+  <div class="video-wrapper-outer">
+    <div class="video-wrapper-inner">
+      <div class="video-overlay"></div>
+      <!-- Start of Brightcove Player -->
+      <div style="display:none">
+
+      </div>
+
+      <!--
+      By use of this code snippet, I agree to the Brightcove Publisher T and C
+      found at https://accounts.brightcove.com/en/terms-and-conditions/.
+      -->
+
+      <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+      <object id="myExperience3910883374001" class="BrightcoveExperience">
+        <param name="bgcolor" value="#000000"/>
+        <param name="width" value="100%"/>
+        <param name="height" value="100%"/>
+        <param name="playerID" value="3902807833001"/>
+        <param name="playerKey" value="AQ~~,AAAB7SJ4Y0E~,bSlWZjVVvKKpj_y1xN_ScmT8BhRmEVxU"/>
+        <param name="isVid" value="true"/>
+        <param name="isUI" value="true"/>
+        <param name="dynamicStreaming" value="true"/>
+
+        <param name="@videoPlayer" value="3903198955001"/>
+
+        <!-- smart player api params -->
+        <param name="includeAPI" value="true" />
+        <param name="templateLoadHandler" value="BCL.onTemplateLoad" />
+        <param name="templateReadyHandler" value="BCL.onTemplateReady" />
+      </object>
+
+      <!--
+      This script tag will cause the Brightcove Players defined above it to be created as soon
+      as the line is read by the browser. If you wish to have the player instantiated only after
+      the rest of the HTML is processed and the page load is complete, remove the line.
+      -->
+      <script type="text/javascript">brightcove.createExperiences();</script>
+
+      <!-- End of Brightcove Player -->
+    </div>
+  </div>
+
+<div class="custom-video-controls">
+  <div>
+    <a href="#" class="play-vid">Play</a>
+    <a href="#" class="pause-vid">Pause</a>
+    <a href="#" class="seek-vid">Seek to 10s</a>
+  </div>
+  <div>
+    <a href="#" class="getCurrentVideo-id-vid">getCurrentVideo().id</a>
+    <a href="#" class="getIsPlaying-vid">getIsPlaying()</a>
+    <a href="#" class="getVideoDuration-vid">getVideoDuration()</a>
+    <a href="#" class="getVideoPosition-vid">getVideoPosition()</a>
+  </div>
+  <div>
+    <a href="#" class="loadVideoByID-vid" data-id="3910883374001">loadVideoByID(3910883374001) - Business Ethics Challenge</a>
+    <a href="#" class="loadVideoByID-vid" data-id="3910883378001">loadVideoByID(3910883378001) - Product Development Challenge</a>
+    <a href="#" class="loadVideoByID-vid" data-id="3910937865001">loadVideoByID(3910937865001) - Careers Challenge</a>
+  </div>
+</div>
+</body>

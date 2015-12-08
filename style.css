@@ -1,0 +1,33 @@
+/* line 1, style.scss */
+body {
+  background: #bdc3c7;
+  padding: 40px;
+}
+
+/* line 5, style.scss */
+.counter {
+  width: 300px;
+  margin: auto;
+  background: #9b59b6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* line 12, style.scss */
+.counter h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 36px;
+}
+/* line 17, style.scss */
+.counter button {
+  background: #f1c40f;
+  border: 0;
+  box-shadow: 0px 5px 0px #927608;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 3px;
+  color: #703688;
+  font-weight: bold;
+}
